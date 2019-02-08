@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{4244940F-AD5C-4961-B533-B80A60E6FD67}</ProjectGuid>
+    <ProjectGuid>{2501D0B9-FC59-44E9-9509-786F6D15F170}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>PATBasicLevelPractice乙级</RootNamespace>
+    <RootNamespace>My1003我要通过</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="1003 我要通过！.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
