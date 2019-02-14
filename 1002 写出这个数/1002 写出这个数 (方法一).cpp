@@ -15,7 +15,6 @@ yi san wu
 */
 
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 string inttostring(int n);	//int转string 
