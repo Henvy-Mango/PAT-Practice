@@ -18,9 +18,11 @@ int main()
 {
 	int m, n;
 	int flag = 1;
-	while (scanf("%d %d", &m, &n) != EOF) 
+	
+	//这样的写法用于机器判题的场合，系统自动输入都是以EOF结尾的（本质原因是系统通过重定向，用文件数据做为输入）
+	while (scanf("%d %d", &m, &n) != EOF)
 	{
-		if (n > 0) 
+		if (n != 0) 
 		{
 			if (flag == 1) 
 			{

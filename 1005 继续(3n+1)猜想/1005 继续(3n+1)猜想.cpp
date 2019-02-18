@@ -30,6 +30,7 @@
 #include<algorithm>
 using namespace std;
 
+//判断函数，降序排序
 bool cmp(int &a, int &b)
 {
 	return a > b;
@@ -40,9 +41,10 @@ int main()
 	bool flag[10000];
 	int k;
 	cin >> k;
-	vector<int> v(k);
-	vector<int> N;
+	vector<int> v(k);	// 定义一个k大小的整型数组v
+	vector<int> N;	 //定义一个空的整型数组N，后续可以通过push_back命令增加元素
 
+	//布尔数组初始化。。。
 	for (int i = 0; i < 10000; i++)
 	{
 		flag[i] = false;
@@ -54,6 +56,7 @@ int main()
 		int n = v[i];
 		while (n != 1)
 		{
+			//将所有出现过的数字作为flag布尔数组的下标并置为true
 			if (n % 2 == 0)
 			{
 				n /= 2;
@@ -71,9 +74,14 @@ int main()
 
 	for (int i = 0; i < k; i++)
 	{
+		//检查输入数据作为flag布尔数组下标是否为false
+		//若为false则之前没有出现过
 		if (flag[v[i]] == false)
 			N.push_back(v[i]);
 	}
+
+	//排序，使用了algorithm头文件
+	//由于sort默认为从小到大，需要引入一个新的判断函数cmp
 	sort(N.begin(), N.end(), cmp);
 
 	for (int i = 0; i < N.size(); i++)

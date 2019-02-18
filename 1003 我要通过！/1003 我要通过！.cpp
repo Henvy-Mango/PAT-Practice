@@ -88,18 +88,18 @@ int main()
 		}
 		if (T_L == P_L + 1)
 		{
-			id=0;
+			id = 0;
 		}
 		//如果 aPbTc 是正确的，那么 aPbATca 也是正确的，其中 a、 b、 c 均或者是空字符串，或者是仅由字母 A 组成的字符串。
 		//注意！其中a*b=c
 		//APAAATAA为NO
 		//AAPATAA为YES
 		//AAPAATAAAA为YES
-		else if (P_L*(T_L - P_L - 1) == strlen(A[i]) - T_L - 1)
-			id=1;
+		else if (P_L*(T_L - P_L - 1) == strlen(A[i]) - T_L - 1 && id != 0)
+			id = 1;
 		else
-			id=0;
-		if(id)
+			id = 0;
+		if (id)
 			cout << "YES" << endl;
 		else
 			cout << "NO" << endl;
